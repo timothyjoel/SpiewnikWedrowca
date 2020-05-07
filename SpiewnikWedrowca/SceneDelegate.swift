@@ -13,14 +13,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         let newAppearance = UINavigationBarAppearance()
         newAppearance.configureWithOpaqueBackground()
         newAppearance.backgroundColor = .systemBackground
         newAppearance.titleTextAttributes = [.foregroundColor: UIColor.label]
         newAppearance.shadowColor = .clear
-
         UINavigationBar.appearance().standardAppearance = newAppearance
 
         // Create the SwiftUI view that provides the window contents.

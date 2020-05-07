@@ -12,6 +12,8 @@
 		817789FD24631A7800C01340 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817789FC24631A7800C01340 /* SongViewModel.swift */; };
 		817789FF246409A100C01340 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817789FE246409A100C01340 /* Icons.swift */; };
 		81778A0124640B6A00C01340 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A0024640B6A00C01340 /* Colors.swift */; };
+		81778A082464147500C01340 /* FavoriteSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A072464147500C01340 /* FavoriteSongsView.swift */; };
+		81778A0A2464149A00C01340 /* FavoriteSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A092464149A00C01340 /* FavoriteSongsViewModel.swift */; };
 		81CA41092462B3F0009BEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA41082462B3F0009BEA6E /* AppDelegate.swift */; };
 		81CA410B2462B3F0009BEA6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */; };
 		81CA410D2462B3F0009BEA6E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA410C2462B3F0009BEA6E /* HomeView.swift */; };
@@ -28,6 +30,8 @@
 		817789FC24631A7800C01340 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
 		817789FE246409A100C01340 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		81778A0024640B6A00C01340 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		81778A072464147500C01340 /* FavoriteSongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongsView.swift; sourceTree = "<group>"; };
+		81778A092464149A00C01340 /* FavoriteSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSongsViewModel.swift; sourceTree = "<group>"; };
 		81CA41052462B3F0009BEA6E /* SpiewnikWedrowca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiewnikWedrowca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CA41082462B3F0009BEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		81778A062464145300C01340 /* FavoriteSongs */ = {
+			isa = PBXGroup;
+			children = (
+				81778A072464147500C01340 /* FavoriteSongsView.swift */,
+				81778A092464149A00C01340 /* FavoriteSongsViewModel.swift */,
+			);
+			path = FavoriteSongs;
+			sourceTree = "<group>";
+		};
 		81CA40FC2462B3F0009BEA6E = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +121,7 @@
 			children = (
 				81CA41082462B3F0009BEA6E /* AppDelegate.swift */,
 				81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */,
+				81778A062464145300C01340 /* FavoriteSongs */,
 				81778A0524640E8000C01340 /* Model */,
 				81778A0224640E2F00C01340 /* HomeView */,
 				81778A0324640E5100C01340 /* SongView */,
@@ -200,8 +214,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CA41092462B3F0009BEA6E /* AppDelegate.swift in Sources */,
+				81778A0A2464149A00C01340 /* FavoriteSongsViewModel.swift in Sources */,
 				81778A0124640B6A00C01340 /* Colors.swift in Sources */,
 				817789FD24631A7800C01340 /* SongViewModel.swift in Sources */,
+				81778A082464147500C01340 /* FavoriteSongsView.swift in Sources */,
 				81CA410B2462B3F0009BEA6E /* SceneDelegate.swift in Sources */,
 				81CA410D2462B3F0009BEA6E /* HomeView.swift in Sources */,
 				817789FB246319FE00C01340 /* SongView.swift in Sources */,
