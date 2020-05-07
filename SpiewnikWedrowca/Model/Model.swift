@@ -11,7 +11,7 @@ import Foundation
 struct Song : Codable, Hashable {
     let number: Int
     let title: String
-    let lyrics: String?
+    let lyrics: String
     
     enum CodingKeys: String, CodingKey {
         case number = "number"
@@ -19,7 +19,7 @@ struct Song : Codable, Hashable {
         case lyrics = "lyrics"
     }
     
-    init(number: Int, title: String, lyrics: String?) {
+    init(number: Int, title: String, lyrics: String) {
         self.number = number
         self.title = title
         self.lyrics = lyrics
@@ -29,7 +29,7 @@ struct Song : Codable, Hashable {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         number = try values.decodeIfPresent(Int.self, forKey: .number)!
         title = try values.decodeIfPresent(String.self, forKey: .title)!
-        lyrics = try values.decodeIfPresent(String.self, forKey: .lyrics)
+        lyrics = try values.decodeIfPresent(String.self, forKey: .lyrics)!
     }
     
 }

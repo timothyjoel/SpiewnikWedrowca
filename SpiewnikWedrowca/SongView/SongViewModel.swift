@@ -8,7 +8,7 @@
 
 import Foundation
 
-fileprivate struct SongPart {
+struct SongPart: Hashable {
     var title: String
     var text: String
 }
@@ -21,10 +21,23 @@ class SongViewModel: ObservableObject {
         self.song = song
     }
     
-    func formattedSongLyrics() -> String {
+    var songParts: [SongPart] {
+        var parts = [SongPart]()
+        let array = formattedSongLyrics().components(separatedBy: "\n\n")
+        var songPart = 0
+        for _ in 0..<array.count - 1 {
+            if songPart < array.count {
+                parts.append(SongPart(title: array[songPart], text: array[songPart+1]))
+                songPart += 2
+            }
+        }
+        return parts
+    }
+    
+    private func formattedSongLyrics() -> String {
         var lyrics = song.lyrics
-        lyrics = lyrics?.replacingOccurrences(of: "\n ", with: "\n")
-        return lyrics ?? ""
+        lyrics = lyrics.replacingOccurrences(of: "\n ", with: "\n")
+        return lyrics
     }
     
     func formattedTitle() -> String {

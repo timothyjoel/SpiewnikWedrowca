@@ -33,9 +33,11 @@ struct HomeView: View {
                         }
                     }
                     .navigationBarItems(leading: Button(action: {
-                        print("Favorites")
+                        print("Opened favorites")
                     }, label: {
-                        Icon(image: .favorite, size: .medium, weight: .semibold, color: .main)
+                        NavigationLink(destination: FavoriteSongsView()) {
+                            Icon(image: .favorite, size: .medium, weight: .semibold, color: .main)
+                        }
                     }), trailing: Button(action: {
                         print("Lists")
                     }, label: {
