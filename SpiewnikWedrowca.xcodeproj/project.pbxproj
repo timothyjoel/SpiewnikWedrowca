@@ -51,6 +51,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81778A0224640E2F00C01340 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				817789F82463116100C01340 /* SearchBarView.swift */,
+				81CA411E2462B650009BEA6E /* HomeViewModel.swift */,
+				81CA410C2462B3F0009BEA6E /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		81778A0324640E5100C01340 /* SongView */ = {
+			isa = PBXGroup;
+			children = (
+				817789FC24631A7800C01340 /* SongViewModel.swift */,
+				817789FA246319FE00C01340 /* SongView.swift */,
+			);
+			path = SongView;
+			sourceTree = "<group>";
+		};
+		81778A0424640E6000C01340 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				817789FE246409A100C01340 /* Icons.swift */,
+				81778A0024640B6A00C01340 /* Colors.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		81778A0524640E8000C01340 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				81CA411C2462B550009BEA6E /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		81CA40FC2462B3F0009BEA6E = {
 			isa = PBXGroup;
 			children = (
@@ -72,14 +108,10 @@
 			children = (
 				81CA41082462B3F0009BEA6E /* AppDelegate.swift */,
 				81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */,
-				81CA411C2462B550009BEA6E /* Model.swift */,
-				817789F82463116100C01340 /* SearchBarView.swift */,
-				81CA410C2462B3F0009BEA6E /* HomeView.swift */,
-				81CA411E2462B650009BEA6E /* HomeViewModel.swift */,
-				817789FC24631A7800C01340 /* SongViewModel.swift */,
-				817789FA246319FE00C01340 /* SongView.swift */,
-				817789FE246409A100C01340 /* Icons.swift */,
-				81778A0024640B6A00C01340 /* Colors.swift */,
+				81778A0524640E8000C01340 /* Model */,
+				81778A0224640E2F00C01340 /* HomeView */,
+				81778A0324640E5100C01340 /* SongView */,
+				81778A0424640E6000C01340 /* Enums */,
 				81CA410E2462B3F1009BEA6E /* Assets.xcassets */,
 				81CA41132462B3F1009BEA6E /* LaunchScreen.storyboard */,
 				81CA41162462B3F1009BEA6E /* Info.plist */,

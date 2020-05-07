@@ -16,7 +16,6 @@ enum HTTPError: LocalizedError {
 class HomeViewModel: ObservableObject {
     
     @Published var songs = [Song]()
-    @Published var searchEntry: String = ""
     
     private var cancellable: AnyCancellable?
     
