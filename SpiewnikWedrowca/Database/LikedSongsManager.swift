@@ -30,6 +30,10 @@ class LikedSongsManager {
         return songs
     }
     
+    func save(_ songs: [Song]) {
+        UserDefaults.standard.set(try? PropertyListEncoder().encode(songs), forKey: "favoriteSongs")
+    }
+    
     func manage(_ action: LikedSongsAction, _ song: Song) {
         var songs = loadSongs()
         switch action {
