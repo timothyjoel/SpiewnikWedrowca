@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+
+    @ObservedObject var sm = SongsManager()
     @ObservedObject var vm = HomeViewModel()
     @State var searchEntry: String = ""
     
@@ -24,7 +25,7 @@ struct HomeView: View {
                         ForEach(self.vm.songs.filter({ (song) -> Bool in
                             searchEntry.isEmpty ? true : song.title.contains(searchEntry)
                         }), id: \.self) { song in
-                            NavigationLink(destination: SongView(vm: SongViewModel(song))) {
+                            NavigationLink(destination: SongView(vm: SongViewModel(song, self.sm))) {
                                 HStack {
                                     Text("\(song.number).")
                                     Text(song.title)
@@ -35,7 +36,7 @@ struct HomeView: View {
                     .navigationBarItems(leading: Button(action: {
                         print("Opened favorites")
                     }, label: {
-                        NavigationLink(destination: FavoriteSongsView()) {
+                        NavigationLink(destination: LikedSongsView(sm: sm)) {
                             Icon(image: .favorite, size: .medium, weight: .semibold, color: .main)
                         }
                     }), trailing: Button(action: {

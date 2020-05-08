@@ -49,6 +49,7 @@ struct LottieButton: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<LottieButton>) -> UIView {
         let view = UIView()
         let animation = Animation.named(filename.rawValue)
+        animationView.backgroundColor = .clear
         animationView.animation = animation
         animationView.contentMode = .scaleAspectFit
         animationView.translatesAutoresizingMaskIntoConstraints = false
@@ -57,6 +58,7 @@ struct LottieButton: UIViewRepresentable {
             animationView.heightAnchor.constraint(equalTo: view.heightAnchor),
             animationView.widthAnchor.constraint(equalTo: view.widthAnchor)
         ])
+        view.backgroundColor = .clear
         return view
     }
     

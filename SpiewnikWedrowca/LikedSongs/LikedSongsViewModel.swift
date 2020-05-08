@@ -1,5 +1,5 @@
 //
-//  FavoriteSongsViewModel.swift
+//  LikedSongsViewModel.swift
 //  SpiewnikWedrowca
 //
 //  Created by Timothy Stokarski on 07/05/2020.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-class FavoriteSongsViewModel: ObservableObject {
+class LikedSongsViewModel: ObservableObject {
     
     @Published var likedSongs = [Song]()
     
-    init() {
-        likedSongs = LikedSongsManager.shared.loadSongs()
+    init(likedSongs: [Song]) {
+        self.likedSongs = likedSongs
     }
     
     func removeSong(at offsets: IndexSet) {

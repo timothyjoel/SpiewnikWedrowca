@@ -35,6 +35,7 @@ struct SongView: View {
             .navigationBarTitle(Text(""), displayMode: .inline)
             Button(action: {
                 self.isLiked.toggle()
+                self.isLiked ? self.vm.like() : self.vm.unlike()
                 self.shouldAnimate = true
             }) {
                 LottieButton(isPressed: $isLiked, shouldAnimate: $shouldAnimate, from: 0.3, to: 1.0, filename: .heartAnimation)
@@ -45,15 +46,12 @@ struct SongView: View {
         .onAppear {
             self.isLiked = self.vm.isLiked
         }
-        .onDisappear {
-            self.isLiked ? self.vm.like() : self.vm.unlike()
-        }
             
     }
 }
 
 struct SongView_Previews: PreviewProvider {
     static var previews: some View {
-        SongView(vm: SongViewModel(Song(number: 57, title: "Alleluja chwalcie Pana", lyrics: "Lyris lyrisc")))
+        SongView(vm: SongViewModel(Song(number: 57, title: "Alleluja chwalcie Pana", lyrics: "Lyris lyrisc"), SongsManager()))
     }
 }
