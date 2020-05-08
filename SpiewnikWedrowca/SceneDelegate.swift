@@ -20,7 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         newAppearance.titleTextAttributes = [.foregroundColor: UIColor.label]
         newAppearance.shadowColor = .clear
         UINavigationBar.appearance().standardAppearance = newAppearance
-
         // Create the SwiftUI view that provides the window contents.
         let contentView = HomeView()
 
