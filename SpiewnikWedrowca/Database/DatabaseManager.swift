@@ -20,6 +20,7 @@ class DatabaseManager: ObservableObject {
         if let data = UserDefaults.standard.value(forKey: "likedSongs") as? Data {
             do {
                 likedSongs = try PropertyListDecoder().decode(Array<Song>.self, from: data)
+                likedSongs.sort { $0.number < $1.number }
             } catch {
                 print(error)
             }
