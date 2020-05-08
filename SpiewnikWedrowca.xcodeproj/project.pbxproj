@@ -13,7 +13,6 @@
 		817789FF246409A100C01340 /* Icons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817789FE246409A100C01340 /* Icons.swift */; };
 		81778A0124640B6A00C01340 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A0024640B6A00C01340 /* Colors.swift */; };
 		81778A082464147500C01340 /* LikedSongsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A072464147500C01340 /* LikedSongsView.swift */; };
-		81778A0A2464149A00C01340 /* LikedSongsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A092464149A00C01340 /* LikedSongsViewModel.swift */; };
 		81778A0D2464473900C01340 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A0C2464473900C01340 /* RoundedCorners.swift */; };
 		81778A10246456D200C01340 /* Ext-UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A0F246456D200C01340 /* Ext-UIScreen.swift */; };
 		81778A132464C74B00C01340 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 81778A122464C74B00C01340 /* Lottie */; };
@@ -37,7 +36,6 @@
 		817789FE246409A100C01340 /* Icons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Icons.swift; sourceTree = "<group>"; };
 		81778A0024640B6A00C01340 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		81778A072464147500C01340 /* LikedSongsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedSongsView.swift; sourceTree = "<group>"; };
-		81778A092464149A00C01340 /* LikedSongsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedSongsViewModel.swift; sourceTree = "<group>"; };
 		81778A0C2464473900C01340 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		81778A0F246456D200C01340 /* Ext-UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-UIScreen.swift"; sourceTree = "<group>"; };
 		81778A152464C79500C01340 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
@@ -107,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				81778A072464147500C01340 /* LikedSongsView.swift */,
-				81778A092464149A00C01340 /* LikedSongsViewModel.swift */,
 			);
 			path = LikedSongs;
 			sourceTree = "<group>";
@@ -270,7 +267,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CA41092462B3F0009BEA6E /* AppDelegate.swift in Sources */,
-				81778A0A2464149A00C01340 /* LikedSongsViewModel.swift in Sources */,
 				81778A162464C79500C01340 /* LottieView.swift in Sources */,
 				81778A0124640B6A00C01340 /* Colors.swift in Sources */,
 				817789FD24631A7800C01340 /* SongViewModel.swift in Sources */,
