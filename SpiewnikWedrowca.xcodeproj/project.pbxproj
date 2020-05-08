@@ -18,6 +18,7 @@
 		81778A10246456D200C01340 /* Ext-UIScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A0F246456D200C01340 /* Ext-UIScreen.swift */; };
 		81778A132464C74B00C01340 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 81778A122464C74B00C01340 /* Lottie */; };
 		81778A162464C79500C01340 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A152464C79500C01340 /* LottieView.swift */; };
+		81778A182464C98200C01340 /* heartAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 81778A172464C98200C01340 /* heartAnimation.json */; };
 		81CA41092462B3F0009BEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA41082462B3F0009BEA6E /* AppDelegate.swift */; };
 		81CA410B2462B3F0009BEA6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */; };
 		81CA410D2462B3F0009BEA6E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA410C2462B3F0009BEA6E /* HomeView.swift */; };
@@ -39,6 +40,7 @@
 		81778A0C2464473900C01340 /* RoundedCorners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCorners.swift; sourceTree = "<group>"; };
 		81778A0F246456D200C01340 /* Ext-UIScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext-UIScreen.swift"; sourceTree = "<group>"; };
 		81778A152464C79500C01340 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		81778A172464C98200C01340 /* heartAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heartAnimation.json; sourceTree = "<group>"; };
 		81CA41052462B3F0009BEA6E /* SpiewnikWedrowca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiewnikWedrowca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CA41082462B3F0009BEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				81778A152464C79500C01340 /* LottieView.swift */,
+				81778A172464C98200C01340 /* heartAnimation.json */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				81CA41152462B3F1009BEA6E /* LaunchScreen.storyboard in Resources */,
 				81CA41122462B3F1009BEA6E /* Preview Assets.xcassets in Resources */,
 				81CA410F2462B3F1009BEA6E /* Assets.xcassets in Resources */,
+				81778A182464C98200C01340 /* heartAnimation.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
