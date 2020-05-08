@@ -40,6 +40,7 @@ struct LottieView: UIViewRepresentable {
 struct LottieButton: UIViewRepresentable {
     
     @Binding var isPressed: Bool
+    @Binding var shouldAnimate: Bool
     var from: AnimationProgressTime = 0.0
     var to: AnimationProgressTime = 1.0
     var filename: AnimationNames
@@ -60,9 +61,10 @@ struct LottieButton: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: UIView, context: UIViewRepresentableContext<LottieButton>) {
-        if isPressed {
-            animationView.play(fromProgress: from, toProgress: to) } else {
-                animationView.play(fromProgress: to, toProgress: from)
-            }
+        if shouldAnimate {
+            animationView.play(fromProgress: isPressed ? from : to, toProgress: isPressed ? to : from)
+        } else {
+            animationView.currentProgress = isPressed ? to : from
         }
+    }
 }

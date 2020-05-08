@@ -13,6 +13,7 @@ struct SongView: View {
     
     var vm: SongViewModel
     @State var isLiked: Bool = false
+    @State var shouldAnimate: Bool = false
     
     var body: some View {
         VStack {
@@ -34,8 +35,9 @@ struct SongView: View {
             .navigationBarTitle(Text(""), displayMode: .inline)
             Button(action: {
                 self.isLiked.toggle()
+                self.shouldAnimate = true
             }) {
-                LottieButton(isPressed: $isLiked, from: 0.3, to: 1.0, filename: .heartAnimation)
+                LottieButton(isPressed: $isLiked, shouldAnimate: $shouldAnimate, from: 0.3, to: 1.0, filename: .heartAnimation)
                     .frame(width: 150, height: 150, alignment: .center)
             }
             
