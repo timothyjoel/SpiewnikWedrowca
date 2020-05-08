@@ -49,6 +49,7 @@ struct SearchBar: UIViewRepresentable {
         searchBar.placeholder = "Szukaj pieśni..."
         searchBar.enablesReturnKeyAutomatically = true
         searchBar.keyboardType = .default
+        searchBar.tintColor = .systemPink
         return searchBar
     }
 
