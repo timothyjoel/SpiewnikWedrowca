@@ -7,10 +7,12 @@
 //
 
 import SwiftUI
+import Lottie
 
 struct SongView: View {
     
     var vm: SongViewModel
+    @State var isLiked: Bool = false
     
     var body: some View {
         VStack {
@@ -30,29 +32,19 @@ struct SongView: View {
                 
             }
             .navigationBarTitle(Text(""), displayMode: .inline)
-            HStack {
-                Spacer()
-                Button(action: {
-                    print("Ulubione")
-                }) {
-                    Text("Dodaj do ulubionych")
-                        .font(.system(size: 16, weight: .semibold, design: .rounded))
-                        .foregroundColor(Colors.background.name)
-                }
-                .frame(width: UIScreen.width/2 - 20, height: 50)
-                .background(RoundedCorners(color: Colors.main.name, tl: 16, tr: 16, bl: 16, br: 16))
-                Spacer()
-                Button(action: {
-                    print("Dodaj do listy pieśni")
-                }) {
-                    Text("Dodaj do listy")
-                        .font(.system(size: 16, weight: .semibold, design: .rounded))
-                        .foregroundColor(Colors.background.name)
-                }
-                .frame(width: UIScreen.width/2 - 20, height: 50)
-                .background(RoundedCorners(color: Colors.main.name, tl: 16, tr: 16, bl: 16, br: 16))
-                Spacer()
+            Button(action: {
+                self.isLiked.toggle()
+            }) {
+                LottieButton(isPressed: $isLiked, from: 0.3, to: 1.0, filename: .heartAnimation)
+                    .frame(width: 150, height: 150, alignment: .center)
             }
+            
+        }
+        .onAppear {
+            self.isLiked = self.vm.isLiked
+        }
+        .onDisappear {
+            self.isLiked ? self.vm.like() : self.vm.unlike()
         }
             
     }
@@ -63,4 +55,3 @@ struct SongView_Previews: PreviewProvider {
         SongView(vm: SongViewModel(Song(number: 57, title: "Alleluja chwalcie Pana", lyrics: "Lyris lyrisc")))
     }
 }
-

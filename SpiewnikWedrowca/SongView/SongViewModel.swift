@@ -44,4 +44,16 @@ class SongViewModel: ObservableObject {
         return String(song.number) + ". \(song.title)"
     }
     
+    var isLiked: Bool {
+        return LikedSongsManager.shared.loadSongs().contains(song)
+    }
+    
+    func like() {
+        LikedSongsManager.shared.manage(.add, song)
+    }
+    
+    func unlike() {
+        LikedSongsManager.shared.manage(.remove, song)
+    }
+    
 }
