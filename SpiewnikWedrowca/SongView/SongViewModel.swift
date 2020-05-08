@@ -15,12 +15,10 @@ struct SongPart: Hashable {
 
 class SongViewModel: ObservableObject {
     
-    var sm: SongsManager
     var song: Song
     
-    init(_ song: Song, _ sm: SongsManager) {
+    init(_ song: Song) {
         self.song = song
-        self.sm = sm
     }
     
     var songParts: [SongPart] {
@@ -44,18 +42,6 @@ class SongViewModel: ObservableObject {
     
     var title: String {
         return String(song.number) + ". \(song.title)"
-    }
-    
-    var isLiked: Bool {
-        return sm.likedSongs.contains(song)
-    }
-    
-    func like() {
-        sm.add(song)
-    }
-    
-    func unlike() {
-        sm.remove(song)
     }
     
 }

@@ -10,20 +10,23 @@ import SwiftUI
 
 struct LikedSongsView: View {
     
-    @ObservedObject var sm: SongsManager
+    @ObservedObject var db: DatabaseManager
     
     var body: some View {
         List {
-            ForEach(sm.likedSongs, id: \.self) { song in
-                NavigationLink(destination: SongView(vm: SongViewModel(song, self.sm))) {
+            ForEach(db.likedSongs, id: \.self) { song in
+                NavigationLink(destination: SongView(song, self.db)) {
                     HStack {
                         Text("\(song.number).")
                         Text(song.title)
                     }
                 }
             }
-            .onDelete(perform: sm.removeSong)
+            .onDelete(perform: db.removeSong)
         }
+        .onAppear(perform: {
+            self.db.loadSongs()
+        })
         .navigationBarTitle(Text("Ulubione pieśni"))
     }
 
@@ -31,6 +34,6 @@ struct LikedSongsView: View {
 
 struct FavoriteSongsView_Previews: PreviewProvider {
     static var previews: some View {
-        LikedSongsView(sm: SongsManager())
+        LikedSongsView(db: DatabaseManager())
     }
 }

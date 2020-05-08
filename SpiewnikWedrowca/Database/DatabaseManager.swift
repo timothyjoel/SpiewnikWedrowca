@@ -8,7 +8,7 @@
 
 import Foundation
 
-class SongsManager: ObservableObject {
+class DatabaseManager: ObservableObject {
 
     @Published var likedSongs = [Song]()
     
@@ -34,8 +34,6 @@ class SongsManager: ObservableObject {
         if !likedSongs.contains(song) {
              likedSongs.append(song)
              saveSongs()
-             print("ADDED TO LIKED: \(song.number)")
-             print(likedSongs)
          }
     }
     
@@ -43,14 +41,16 @@ class SongsManager: ObservableObject {
         if likedSongs.contains(song) {
              likedSongs = likedSongs.filter { $0 != song }
              saveSongs()
-             print("REMOVED FROM LIKED: \(song.number)")
-             print(likedSongs)
          }
     }
     
     func removeSong(at offsets: IndexSet) {
         likedSongs.remove(atOffsets: offsets)
         saveSongs()
+    }
+    
+    func isLiked(_ song: Song) -> Bool {
+        return likedSongs.contains(song)
     }
     
 }
