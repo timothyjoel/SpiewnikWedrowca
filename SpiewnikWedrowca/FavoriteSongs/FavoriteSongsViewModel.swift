@@ -10,25 +10,14 @@ import Foundation
 
 class FavoriteSongsViewModel: ObservableObject {
     
-    @Published var favoriteSongs = [Song]()
+    @Published var likedSongs = [Song]()
     
     init() {
-        loadFavoriteSongs()
+        likedSongs = LikedSongsManager.shared.loadSongs()
     }
     
-    func loadFavoriteSongs() {
-        if let data = UserDefaults.standard.value(forKey:"favoriteSongs") as? Data {
-            do {
-                favoriteSongs = try PropertyListDecoder().decode(Array<Song>.self, from: data)
-            } catch {
-                print(error)
-            }
-        }
+    func removeSong(at offsets: IndexSet) {
+        likedSongs.remove(atOffsets: offsets)
     }
-    
-    func saveFavoriteSongs() {
-        UserDefaults.standard.set(try? PropertyListEncoder().encode(favoriteSongs), forKey: "favoriteSongs")
-    }
-    
     
 }

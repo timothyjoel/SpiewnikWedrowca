@@ -14,10 +14,20 @@ struct FavoriteSongsView: View {
     
     var body: some View {
             List {
-                Text("Poop")
+                ForEach(vm.likedSongs, id: \.self) { song in
+                    HStack {
+                        Text("\(song.number).")
+                        Text(song.title)
+                    }
+                }
+                .onDelete(perform: vm.removeSong)
             }
             .navigationBarTitle(Text("Ulubione pieśni"))
+            .onDisappear {
+                LikedSongsManager.shared.save(self.vm.likedSongs)
+        }
     }
+
 }
 
 struct FavoriteSongsView_Previews: PreviewProvider {
