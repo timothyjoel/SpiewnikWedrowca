@@ -23,7 +23,8 @@ struct HomeView: View {
                     SearchBar(text: $searchEntry)
                     List {
                         ForEach(self.vm.songs.filter({ (song) -> Bool in
-                            searchEntry.isEmpty ? true : song.title.contains(searchEntry)
+                            searchEntry.isEmpty ? true : song.title.lowercased()
+                                .contains(searchEntry.lowercased())
                         }), id: \.self) { song in
                             NavigationLink(destination: SongView(song, self.db)) {
                                 HStack {
