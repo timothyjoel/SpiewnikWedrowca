@@ -22,7 +22,19 @@ struct SearchBar: UIViewRepresentable {
 
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             text = searchText
+            searchBar.showsCancelButton = true
         }
+        
+        func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
+        }
+        
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            searchBar.resignFirstResponder()
+            searchBar.showsCancelButton = false
+            text = ""
+        }
+        
     }
 
     func makeCoordinator() -> SearchBar.Coordinator {
