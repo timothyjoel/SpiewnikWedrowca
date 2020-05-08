@@ -33,6 +33,10 @@ struct SearchBar: UIViewRepresentable {
         let searchBar = UISearchBar(frame: .zero)
         searchBar.delegate = context.coordinator
         searchBar.searchBarStyle = .minimal
+        searchBar.returnKeyType = .done
+        searchBar.placeholder = "Szukaj pieśni..."
+        searchBar.enablesReturnKeyAutomatically = true
+        searchBar.keyboardType = .default
         return searchBar
     }
 
