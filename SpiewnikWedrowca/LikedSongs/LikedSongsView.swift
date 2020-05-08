@@ -15,9 +15,11 @@ struct LikedSongsView: View {
     var body: some View {
         List {
             ForEach(sm.likedSongs, id: \.self) { song in
-                HStack {
-                    Text("\(song.number).")
-                    Text(song.title)
+                NavigationLink(destination: SongView(vm: SongViewModel(song, self.sm))) {
+                    HStack {
+                        Text("\(song.number).")
+                        Text(song.title)
+                    }
                 }
             }
             .onDelete(perform: sm.removeSong)
