@@ -40,7 +40,7 @@ class SongViewModel: ObservableObject {
         return lyrics
     }
     
-    func formattedTitle() -> String {
+    var title: String {
         return String(song.number) + ". \(song.title)"
     }
     

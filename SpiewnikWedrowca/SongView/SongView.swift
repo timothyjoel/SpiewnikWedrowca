@@ -17,7 +17,7 @@ struct SongView: View {
     var body: some View {
         VStack {
             List {
-                Text(vm.formattedTitle())
+                Text(vm.title)
                 .font(.system(size: 20, weight: .bold, design: .default))
                 ForEach(self.vm.songParts, id: \.self) { (song) in
                     VStack (alignment: .leading, spacing: 16) {
