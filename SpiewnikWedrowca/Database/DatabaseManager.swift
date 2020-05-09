@@ -52,6 +52,7 @@ class DatabaseManager: ObservableObject {
     
     func removeAll() {
         likedSongs.removeAll()
+        saveSongs()
     }
     
     func isLiked(_ song: Song) -> Bool {
