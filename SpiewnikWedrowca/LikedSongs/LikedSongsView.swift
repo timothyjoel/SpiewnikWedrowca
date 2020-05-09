@@ -28,6 +28,13 @@ struct LikedSongsView: View {
             self.db.loadSongs()
         })
         .navigationBarTitle(Text("Ulubione pieśni"))
+        .navigationBarItems(trailing:
+            Button(action: {
+                self.db.removeAll()
+            }, label: {
+                Icon(image: .trash, size: .medium, weight: .semibold, color: .main)
+            })
+        )
     }
 
 }

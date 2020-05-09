@@ -11,11 +11,13 @@ import SwiftUI
 enum IconImage: String {
     case favorite
     case list
+    case trash
     
     var name: String {
         switch self {
         case .favorite: return "heart.fill"
         case .list: return "list.dash"
+        case .trash: return "trash"
         }
     }
 }
