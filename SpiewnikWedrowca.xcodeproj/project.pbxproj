@@ -19,6 +19,7 @@
 		81778A162464C79500C01340 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A152464C79500C01340 /* LottieView.swift */; };
 		81778A182464C98200C01340 /* heartAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 81778A172464C98200C01340 /* heartAnimation.json */; };
 		81778A1D24654EA900C01340 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A1C24654EA900C01340 /* DatabaseManager.swift */; };
+		81778A222466AEC400C01340 /* SingleSelectionPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81778A212466AEC400C01340 /* SingleSelectionPopup.swift */; };
 		81CA41092462B3F0009BEA6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA41082462B3F0009BEA6E /* AppDelegate.swift */; };
 		81CA410B2462B3F0009BEA6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */; };
 		81CA410D2462B3F0009BEA6E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81CA410C2462B3F0009BEA6E /* HomeView.swift */; };
@@ -41,6 +42,7 @@
 		81778A152464C79500C01340 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		81778A172464C98200C01340 /* heartAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heartAnimation.json; sourceTree = "<group>"; };
 		81778A1C24654EA900C01340 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		81778A212466AEC400C01340 /* SingleSelectionPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleSelectionPopup.swift; sourceTree = "<group>"; };
 		81CA41052462B3F0009BEA6E /* SpiewnikWedrowca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiewnikWedrowca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CA41082462B3F0009BEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +144,14 @@
 			path = Database;
 			sourceTree = "<group>";
 		};
+		81778A202466AEAE00C01340 /* Popups */ = {
+			isa = PBXGroup;
+			children = (
+				81778A212466AEC400C01340 /* SingleSelectionPopup.swift */,
+			);
+			path = Popups;
+			sourceTree = "<group>";
+		};
 		81CA40FC2462B3F0009BEA6E = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +173,7 @@
 			children = (
 				81CA41082462B3F0009BEA6E /* AppDelegate.swift */,
 				81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */,
+				81778A202466AEAE00C01340 /* Popups */,
 				81778A1B24654E8A00C01340 /* Database */,
 				81778A142464C77500C01340 /* Animations */,
 				81778A0E246456C000C01340 /* Extensions */,
@@ -267,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81CA41092462B3F0009BEA6E /* AppDelegate.swift in Sources */,
+				81778A222466AEC400C01340 /* SingleSelectionPopup.swift in Sources */,
 				81778A162464C79500C01340 /* LottieView.swift in Sources */,
 				81778A0124640B6A00C01340 /* Colors.swift in Sources */,
 				817789FD24631A7800C01340 /* SongViewModel.swift in Sources */,
