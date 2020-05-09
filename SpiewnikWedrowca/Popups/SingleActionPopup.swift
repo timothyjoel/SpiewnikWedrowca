@@ -1,5 +1,5 @@
 //
-//  SingleSelectionPopup.swift
+//  SingleActionPopup.swift
 //  SpiewnikWedrowca
 //
 //  Created by Timothy Stokarski on 09/05/2020.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct SingleSelectionPopup: View {
+struct SingleActionPopup: View {
 
     @Binding var showView: Bool
     var icon: IconImage
@@ -62,6 +62,6 @@ struct SingleSelectionPopup: View {
 
 struct SingleSelectionPopup_Previews: PreviewProvider {
     static var previews: some View {
-        SingleSelectionPopup(showView: .constant(true), icon: .trash, message: "Czy na pewno chcesz usunąć wszystkie polubione pieśni?", buttonTitle: "Akceptuj", action: nil)
+        SingleActionPopup(showView: .constant(true), icon: .trash, message: "Czy na pewno chcesz usunąć wszystkie polubione pieśni?", buttonTitle: "Akceptuj", action: nil)
     }
 }
