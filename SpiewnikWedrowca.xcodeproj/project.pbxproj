@@ -45,7 +45,7 @@
 		81778A1C24654EA900C01340 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		81778A212466AEC400C01340 /* SingleActionPopup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleActionPopup.swift; sourceTree = "<group>"; };
 		81778A23246753A200C01340 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		81CA41052462B3F0009BEA6E /* SpiewnikWedrowca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpiewnikWedrowca.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		81CA41052462B3F0009BEA6E /* Wędrowiec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wędrowiec.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81CA41082462B3F0009BEA6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81CA410A2462B3F0009BEA6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		81CA410C2462B3F0009BEA6E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -166,7 +166,7 @@
 		81CA41062462B3F0009BEA6E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81CA41052462B3F0009BEA6E /* SpiewnikWedrowca.app */,
+				81CA41052462B3F0009BEA6E /* Wędrowiec.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 				81778A122464C74B00C01340 /* Lottie */,
 			);
 			productName = SpiewnikWedrowca;
-			productReference = 81CA41052462B3F0009BEA6E /* SpiewnikWedrowca.app */;
+			productReference = 81CA41052462B3F0009BEA6E /* Wędrowiec.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -442,7 +442,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = timothystokarski.SpiewnikWedrowca;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Wędrowiec";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,7 +462,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = timothystokarski.SpiewnikWedrowca;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Wędrowiec";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
