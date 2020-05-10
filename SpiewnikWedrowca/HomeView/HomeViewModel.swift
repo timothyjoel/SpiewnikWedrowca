@@ -16,7 +16,6 @@ enum HTTPError: LocalizedError {
 class HomeViewModel: ObservableObject {
     
     @Published var songs = [Song]()
-    
     private var cancellable: AnyCancellable?
     
     init() {
@@ -54,6 +53,3 @@ class HomeViewModel: ObservableObject {
     }
     
 }
-
-
-
