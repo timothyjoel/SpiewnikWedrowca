@@ -24,6 +24,7 @@ class HomeViewModel: ObservableObject {
     }
     
     func fetchSongs() {
+        songs.removeAll()
         let urlString = "https://raw.githubusercontent.com/timothyjoel/SpiewnikWedrowca/master/wedrowiec.json"
         guard let url = URL(string: urlString) else {
             return
