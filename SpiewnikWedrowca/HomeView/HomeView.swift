@@ -18,7 +18,14 @@ struct HomeView: View {
         NavigationView {
             VStack {
                 if vm.songs.isEmpty {
-                    Text("Loading")
+                    VStack (spacing: 40) {
+                        ActivityIndicator()
+                            .frame(width: 60, height: 60, alignment: .center)
+                        Text("Ładowanie pieśni...")
+                            .font(.system(size: 16, weight: .semibold, design: .default))
+                            .foregroundColor(Colors.label.name)
+                    }
+                    .foregroundColor(Colors.main.name)
                 } else {
                     SearchBar(text: $searchEntry)
                     List {
