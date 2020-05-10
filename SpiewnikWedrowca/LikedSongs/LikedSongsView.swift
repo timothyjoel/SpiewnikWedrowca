@@ -39,7 +39,7 @@ struct LikedSongsView: View {
                                 self.showDeleteConfirmation.toggle()
                             }
                         }, label: {
-                            Icon(image: .trash, size: .medium, weight: .semibold, color: .main)
+                            Icon(image: .trash, size: .medium, weight: .semibold, color: .mainColor)
                             .opacity(self.db.likedSongs.isEmpty ? 0.0 : 1.0)
                         })
                 )

@@ -26,12 +26,12 @@ struct Icon: View {
     var image: IconImage
     var size: Image.Scale
     var weight: Font.Weight
-    var color: Colors
+    var color: Color
     var body: some View {
         Image(systemName: image.name)
             .font(.system(size: 20, weight: weight))
             .imageScale(size)
             .frame(width: 32, height: 32)
-            .foregroundColor(color.name)
+            .foregroundColor(color)
     }
 }

@@ -93,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				817789FE246409A100C01340 /* Icons.swift */,
-				81778A0024640B6A00C01340 /* Colors.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -126,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				81778A0F246456D200C01340 /* Ext-UIScreen.swift */,
+				81778A0024640B6A00C01340 /* Colors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";

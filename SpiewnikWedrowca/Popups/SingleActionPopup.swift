@@ -20,10 +20,10 @@ struct SingleActionPopup: View {
         VStack {
             Spacer()
             VStack (spacing: 20) {
-                Icon(image: icon, size: .large, weight: .semibold, color: .background)
+                Icon(image: icon, size: .large, weight: .semibold, color: .backgroundColor)
                     .frame(width: 70, height: 70, alignment: .center)
-                    .background(RoundedCorners(color: Colors.main.name, tl: 35, tr: 35, bl: 35, br: 35))
-                    .shadow(color: Colors.main.name.opacity(0.7), radius: 6, x: 0, y: -4)
+                    .background(RoundedCorners(color: .mainColor, tl: 35, tr: 35, bl: 35, br: 35))
+                    .shadow(color: Color.mainColor.opacity(0.7), radius: 6, x: 0, y: -4)
                     .offset(x: 0, y: -30)
                     .animation(nil)
                 Text(message)
@@ -39,8 +39,8 @@ struct SingleActionPopup: View {
                             .animation(nil)
                     }
                     .frame(width: UIScreen.width*2/3 - 32, height: 50, alignment: .center)
-                    .foregroundColor(Colors.background.name)
-                    .background(RoundedCorners(color: Colors.main.name, tl: 16, tr: 16, bl: 16, br: 16))
+                    .foregroundColor(.backgroundColor)
+                    .background(RoundedCorners(color: .mainColor, tl: 16, tr: 16, bl: 16, br: 16))
                     Button(action: {
                         self.showView.toggle()
                     }) {
@@ -48,12 +48,12 @@ struct SingleActionPopup: View {
                             .font(.system(size: 16, weight: .semibold, design: .default))
                             .animation(nil)
                     }
-                    .foregroundColor(Colors.main.name)
+                    .foregroundColor(.mainColor)
                     .frame(width: UIScreen.width*2/3 - 32, height: 50, alignment: .center)
                 }
             }
             .frame(width: UIScreen.width*2/3, alignment: .center)
-            .background(RoundedCorners(color: Colors.background.name, tl: 16, tr: 16, bl: 16, br: 16))
+            .background(RoundedCorners(color: .backgroundColor, tl: 16, tr: 16, bl: 16, br: 16))
             .shadow(radius: 20)
             Spacer()
         }

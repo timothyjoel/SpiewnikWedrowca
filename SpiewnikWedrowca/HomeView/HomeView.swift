@@ -23,9 +23,9 @@ struct HomeView: View {
                             .frame(width: 60, height: 60, alignment: .center)
                         Text("Ładowanie pieśni...")
                             .font(.system(size: 16, weight: .semibold, design: .default))
-                            .foregroundColor(Colors.label.name)
+                            .foregroundColor(.mainColor)
                     }
-                    .foregroundColor(Colors.main.name)
+                    .foregroundColor(.textColor)
                 } else {
                     SearchBar(text: $searchEntry)
                     List {
@@ -45,12 +45,12 @@ struct HomeView: View {
                         print("Opened favorites")
                     }, label: {
                         NavigationLink(destination: LikedSongsView(db: db)) {
-                            Icon(image: .favorite, size: .medium, weight: .semibold, color: .main)
+                            Icon(image: .favorite, size: .medium, weight: .semibold, color: .mainColor)
                         }
                     }), trailing: Button(action: {
                         print("Lists")
                     }, label: {
-                        Icon(image: .list, size: .medium, weight: .semibold, color: .main)
+                        Icon(image: .list, size: .medium, weight: .semibold, color: .mainColor)
                     }))
                         .navigationBarTitle(Text("Śpiewnik Wędrowca"))
                 }
