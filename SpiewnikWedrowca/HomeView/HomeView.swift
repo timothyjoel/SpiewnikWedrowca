@@ -51,7 +51,7 @@ struct HomeView: View {
                     .navigationBarTitle(Text("Śpiewnik Wędrowca"))
                 }
             }
-        }
+        }.navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
