@@ -12,12 +12,14 @@ enum IconImage: String {
     case favorite
     case list
     case trash
+    case reload
     
     var name: String {
         switch self {
         case .favorite: return "heart.fill"
         case .list: return "list.dash"
         case .trash: return "trash"
+        case .reload: return "arrow.clockwise"
         }
     }
 }
