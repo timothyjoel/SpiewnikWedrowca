@@ -26,17 +26,17 @@ struct SongView: View {
         ZStack {
             VStack {
                 List {
-                    if #available(iOS 15.0, *) {
                         Text(vm.title)
                             .font(.system(size: 20, weight: .bold, design: .default))
-                            .listRowSeparator(.hidden)
-                    } else {
-                        Text(vm.title)
-                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                            .frame(
+                              minWidth: 0, maxWidth: .infinity,
+                              minHeight: 44,
+                              alignment: .leading
+                            )
                             .listRowInsets(EdgeInsets())
-                    }
+                            .background(Color.backgroundColor)
                     ForEach(self.vm.songParts, id: \.self) { (song) in
-                        if #available(iOS 15.0, *) {
                             VStack (alignment: .leading, spacing: 16) {
                                 Text(song.title)
                                     .font(.system(size: 17, weight: .bold, design: .default))
@@ -44,17 +44,14 @@ struct SongView: View {
                                     .font(.system(size: 17, weight: .regular, design: .default))
                                     .lineSpacing(6)
                             }
-                            .listRowSeparator(.hidden)
-                        } else {
-                            VStack (alignment: .leading, spacing: 16) {
-                                Text(song.title)
-                                    .font(.system(size: 17, weight: .bold, design: .default))
-                                Text(song.text)
-                                    .font(.system(size: 17, weight: .regular, design: .default))
-                                    .lineSpacing(6)
-                            }
+                            .padding(EdgeInsets(top: 0, leading: 16, bottom: 0, trailing: 16))
+                            .frame(
+                              minWidth: 0, maxWidth: .infinity,
+                              minHeight: 44,
+                              alignment: .leading
+                            )
                             .listRowInsets(EdgeInsets())
-                        }
+                            .background(Color.backgroundColor)
                     }
                 }
                 .listStyle(PlainListStyle())
