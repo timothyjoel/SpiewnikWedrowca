@@ -17,11 +17,10 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
                 if self.vm.state == .loading {
                     VStack (spacing: 40) {
-                        ActivityIndicator()
-                            .frame(width: 60, height: 60, alignment: .center)
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
                         Text("Ładowanie pieśni...")
                             .font(.system(size: 16, weight: .semibold, design: .default))
                             .foregroundColor(.textColor)
