@@ -13,16 +13,22 @@ enum HTTPError: LocalizedError {
     case statusCode
 }
 
+enum LoadingState {
+    case loading, failed, finished
+}
+
 class HomeViewModel: ObservableObject {
     
     @Published var songs = [Song]()
     private var cancellable: AnyCancellable?
+    @Published var state: LoadingState = .loading
     
     init() {
         fetchSongs()
     }
     
     func fetchSongs() {
+        self.state = .loading
         songs.removeAll()
         let urlString = "https://raw.githubusercontent.com/timothyjoel/SpiewnikWedrowca/master/wedrowiec.json"
         guard let url = URL(string: urlString) else {
@@ -31,6 +37,7 @@ class HomeViewModel: ObservableObject {
         self.cancellable = URLSession.shared.dataTaskPublisher(for: url)
             .tryMap { output in
                 guard let response = output.response as? HTTPURLResponse, response.statusCode == 200 else {
+                    self.state = .failed
                     throw HTTPError.statusCode
                 }
                 return output.data
@@ -48,7 +55,7 @@ class HomeViewModel: ObservableObject {
             }
         }, receiveValue: { songs in
             self.songs = songs
-                self.songs = songs
+            self.state = .finished
         })
     }
     

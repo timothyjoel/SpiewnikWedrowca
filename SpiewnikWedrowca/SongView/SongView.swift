@@ -26,20 +26,38 @@ struct SongView: View {
         ZStack {
             VStack {
                 List {
-                    Text(vm.title)
-                    .font(.system(size: 20, weight: .bold, design: .default))
-                    ForEach(self.vm.songParts, id: \.self) { (song) in
-                        VStack (alignment: .leading, spacing: 16) {
-                            Text(song.title)
-                                .font(.system(size: 17, weight: .bold, design: .default))
-                            Text(song.text)
-                                .font(.system(size: 17, weight: .regular, design: .default))
-                                .lineSpacing(6)
-                        }
-                        
+                    if #available(iOS 15.0, *) {
+                        Text(vm.title)
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .listRowSeparator(.hidden)
+                    } else {
+                        Text(vm.title)
+                            .font(.system(size: 20, weight: .bold, design: .default))
+                            .listRowInsets(EdgeInsets())
                     }
-                    
+                    ForEach(self.vm.songParts, id: \.self) { (song) in
+                        if #available(iOS 15.0, *) {
+                            VStack (alignment: .leading, spacing: 16) {
+                                Text(song.title)
+                                    .font(.system(size: 17, weight: .bold, design: .default))
+                                Text(song.text)
+                                    .font(.system(size: 17, weight: .regular, design: .default))
+                                    .lineSpacing(6)
+                            }
+                            .listRowSeparator(.hidden)
+                        } else {
+                            VStack (alignment: .leading, spacing: 16) {
+                                Text(song.title)
+                                    .font(.system(size: 17, weight: .bold, design: .default))
+                                Text(song.text)
+                                    .font(.system(size: 17, weight: .regular, design: .default))
+                                    .lineSpacing(6)
+                            }
+                            .listRowInsets(EdgeInsets())
+                        }
+                    }
                 }
+                .listStyle(PlainListStyle())
                 .navigationBarTitle(Text(""), displayMode: .inline)
             }
                 

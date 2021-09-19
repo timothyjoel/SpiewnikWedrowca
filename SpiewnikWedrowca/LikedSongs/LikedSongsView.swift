@@ -27,6 +27,7 @@ struct LikedSongsView: View {
                     }
                     .onDelete(perform: db.removeSong)
                 }
+                .listStyle(PlainListStyle())
                 .blur(radius: self.showDeleteConfirmation ? 10 : 0)
                 .onAppear(perform: {
                     self.db.loadSongs()

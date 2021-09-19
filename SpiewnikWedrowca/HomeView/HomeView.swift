@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct HomeView: View {
-
+    
     @ObservedObject var db = DatabaseManager()
     @ObservedObject var vm = HomeViewModel()
     @State var searchEntry: String = ""
@@ -17,7 +17,8 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             VStack {
-                if vm.songs.isEmpty {
+                
+                if self.vm.state == .loading {
                     VStack (spacing: 40) {
                         ActivityIndicator()
                             .frame(width: 60, height: 60, alignment: .center)
@@ -26,8 +27,11 @@ struct HomeView: View {
                             .foregroundColor(.textColor)
                     }
                     .foregroundColor(.mainColor)
-                } else {
+                }
+                
+                if self.vm.state == .finished {
                     SearchBar(text: $searchEntry)
+                    .padding(.horizontal, 12)
                     List {
                         ForEach(self.vm.songs.filter({ (song) -> Bool in
                             searchEntry.isEmpty ? true : song.title.lowercased()
@@ -41,6 +45,7 @@ struct HomeView: View {
                             }
                         }
                     }
+                    .listStyle(PlainListStyle())
                     .navigationBarItems(leading: NavigationLink(destination: LikedSongsView(db: db), label: {
                         Icon(image: .favorite, size: .medium, weight: .semibold, color: .mainColor)
                     }), trailing: Button(action: {
@@ -48,10 +53,12 @@ struct HomeView: View {
                     }, label: {
                         Icon(image: .reload, size: .medium, weight: .semibold, color: .mainColor)
                     }))
-                    .navigationBarTitle(Text("Śpiewnik Wędrowca"))
+                        .navigationBarTitle(Text("Śpiewnik Wędrowca"))
                 }
+                
             }
-        }.navigationViewStyle(StackNavigationViewStyle())
+            .background(Color.backgroundColor)
+        }
     }
 }
 
